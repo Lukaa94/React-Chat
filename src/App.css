@@ -101,7 +101,6 @@ li{
 .Messages.currentMember {
   display: flex;
   flex-direction: row-reverse;
-  text-align: right;
 }
 
 .Messages {
