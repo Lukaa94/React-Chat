@@ -1,38 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap');
+
+h1, li, .username, button, input{
+  font-family: 'Kufam', cursive;
+}
+
+body{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(216, 215, 210);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background:rgb(68, 111, 189);
+  color:rgb(216, 215, 210);
+  height: 20vh;
+  font-size: 22px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input{
+  height: 36px;
+  width: 40%;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-right: 20px;
+  outline: none;
+  font-size: 17px;
+  color:rgb(68, 111, 189);
+}
+
+input:hover{
+  background:rgb(68, 111, 189);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus::-webkit-input-placeholder {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button{
+  width: 10%;
+  height: 36px;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid black;
+  color: rgb(68, 111, 189);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background: rgb(68, 111, 189);
+  color:rgb(216, 215, 210);
+}
+
+.Message-container{
+  display: flex;
+}
+
+li{
+  list-style: none;
+}
+
+.username{
+  padding-left: 10px;
+  color: rgb(68, 111, 189);
+  text-transform: uppercase;
+}
+
+.text{
+  background: #999;
+  max-width: 500px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px 0px;
+  color: white;
+}
+
+.Messages.currentMember {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Messages {
+  display: flex;
+  
+}
+
+.currentMember .text {
+  background:rgb(68, 111, 189);
+}
+
+.Messages-list {
+  padding: 20px 30px;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+@media(max-width: 768px){
+  input{
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  button{
+    width: 20%;
   }
 }
