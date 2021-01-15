@@ -4,7 +4,7 @@ class Input extends React.Component {
     constructor(){
       super()
       this.state = {
-        text: ""
+        text: "",
       }
     }
     
@@ -19,12 +19,15 @@ class Input extends React.Component {
       sendMessage(text);
       this.setState({text: ""});
     }
-  
+
     render() {
         const {text} = this.state
       return (
         <div className="Form-container">
           <form onSubmit={this.handleSubmit}>
+            <div className="smile" >
+              <span>&#128512;</span>
+            </div>
             <input
               onChange={this.handleChange}
               value={text}

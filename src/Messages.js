@@ -1,12 +1,11 @@
-
 import React from "react";
 
 class Messages extends React.Component {
   renderMessage(message, index) {
     const {member, text} = message;
     const {currentMember} = this.props;
-    const messageId = member.id === currentMember.id;
-    const chooseUser = messageId ?
+    const user = member.id === currentMember.id;
+    const chooseUser = user ?
       "Messages currentMember" : "Messages";
         return (
           <li key={index} className={chooseUser}>

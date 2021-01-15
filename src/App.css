@@ -26,6 +26,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 5px solid black;
 }
 
 form{
@@ -42,10 +43,11 @@ input{
   width: 40%;
   border-radius: 20px;
   border: 2px solid black;
-  margin-right: 20px;
+  margin: 0px 20px;
   outline: none;
   font-size: 17px;
   color:rgb(68, 111, 189);
+  text-indent: 14px;
 }
 
 input:hover{
@@ -117,6 +119,17 @@ li{
   overflow: auto;
 }
 
+.smile{
+  background:rgb(68, 111, 189);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media(max-width: 768px){
   input{
     width: 50%;
@@ -125,3 +138,4 @@ li{
     width: 20%;
   }
 }
+
